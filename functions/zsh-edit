@@ -88,7 +88,7 @@ zle -N find-replace-char .edit.find-replace
 bindkey -M emacs '^]' find-replace-char
 
 
-typeset -ga _edit_yank_widgets=( yank {,reverse-}yank-pop vi-put-{before,after} )
+typeset -ga _edit_yank_widgets=( {,reverse-}yank-pop vi-put-{before,after} )
 for widget in $_edit_yank_widgets; do
   zle -N "$widget" .edit.visual-yank
   zstyle ":autocomplete:${widget}:*" ignore yes
